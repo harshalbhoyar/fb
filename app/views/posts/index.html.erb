@@ -28,4 +28,8 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+  <ht><%= current_user.email%></ht>
+<% end %>
+
