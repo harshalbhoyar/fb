@@ -1,14 +1,33 @@
-<p id="notice"><%= notice %></p>
 
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">Our Logo</a>
+   <form class="form-inline">
+      <div style="padding-left: 10px;">
+       <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+    </div>
+  </form>
+</nav>
+
+<p id="notice"><%= notice %></p>
+<div class="jumbotron">
 <h1>Posts</h1>
 
-<table>
+<head>
+<style>
+table, th, td{
+  border: 2px solid black;
+  background-color: green
+  border-collapse: collapse;
+}
+</style>
+</head>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Author</th>
-      <th colspan="3"></th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Author</th>
+      <th scope="col" colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -25,11 +44,12 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Post', new_post_path %>
+  <%= link_to 'New Post', new_post_path %> |
   <ht><%= current_user.email%></ht>
 <% end %>
 
