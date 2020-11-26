@@ -1,33 +1,11 @@
 
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="/">Our Logo</a>
-   <form class="form-inline">
-      <div style="padding-left: 10px;">
-       <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-    </div>
-  </form>
-</nav>
-
-<p id="notice"><%= notice %></p>
-<div class="jumbotron">
-<h1>Posts</h1>
-
-<head>
-<style>
-table, th, td{
-  border: 2px solid black;
-  background-color: green
-  border-collapse: collapse;
-}
-</style>
-</head>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Author</th>
-      <th scope="col" colspan="3">Actions</th>
+      <th style="background-color:#00FF00">Title</th>
+      <th style="background-color:#00FF00">Description</th>
+      <th style="background-color:#00FF00">Author</th>
+      <th style="background-color:#00FF00" colspan="3">Actions</th>
     </tr>
   </thead>
 
